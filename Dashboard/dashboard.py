@@ -3,7 +3,7 @@ import matplotlib as plt
 import seaborn as sns
 import streamlit as st
 
-import os
+
 sns.set(style='dark')
 
 def create_season_df(df):
@@ -36,8 +36,8 @@ def create_temp_df(df):
     temp_df = df.groupby('temp_category')['count_total'].sum()
     return temp_df
 
-cwd = os.getcwd()
-day_df = pd.read_csv(cwd + '\\Dashboard\\day_main.csv')
+
+day_df = pd.read_csv('/Dashboard/day_main.csv')
 day_df['dateday'] = pd.to_datetime(day_df['dateday'])
 day_df.sort_values(by="dateday", inplace=True)
 
