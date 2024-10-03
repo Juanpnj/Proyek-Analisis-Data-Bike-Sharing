@@ -45,7 +45,7 @@ day_df.sort_values(by="dateday", inplace=True)
 min_date = day_df["dateday"].min()
 max_date = day_df["dateday"].max()
 with st.sidebar:
-    st.image(cwd + "\\Dashboard\\rental3.jpg")
+    st.image(cwd + "/Dashboard/rental3.jpg")
     start_date, end_date = st.date_input(
         label='Rentang Waktu', min_value=min_date,
         max_value=max_date,
