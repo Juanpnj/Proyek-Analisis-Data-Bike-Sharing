@@ -37,7 +37,7 @@ def create_temp_df(df):
     return temp_df
 
 cwd = os.getcwd()
-day_df = pd.read_csv(cwd + '/day_main.csv')
+day_df = pd.read_csv(cwd + '/Dashboard/day_main.csv')
 day_df['dateday'] = pd.to_datetime(day_df['dateday'])
 day_df.sort_values(by="dateday", inplace=True)
 
